@@ -25,7 +25,7 @@ interface InputProps {
   placeholder: string;
   backgroundImage?: string;
   width?: string;
-  height?: string; // width는 선택적 props로 정의되어야 합니다.
+  height?: string;
 }
 
 const InputField: React.FC<InputProps> = ({
@@ -34,7 +34,7 @@ const InputField: React.FC<InputProps> = ({
   placeholder,
   backgroundImage,
   width = "100%",
-  height = "100%", // 기본값으로 "100%"를 설정합니다.
+  height = "100%",
 }) => {
   return (
     <div>
