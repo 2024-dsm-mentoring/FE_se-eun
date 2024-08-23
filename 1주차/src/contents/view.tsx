@@ -1,5 +1,8 @@
+// View.tsx
 import styled from "styled-components";
 import img from "./FE_mentoring_img/Frame.png";
+import Button from "./components/button";
+import { FlexContainer, StyledDiv } from "./components/div"; // div 컴포넌트 임포트
 
 const Body = styled.body`
   margin: 0;
@@ -21,64 +24,9 @@ const FeedList = styled.p`
   margin-right: auto;
 `;
 
-const TopContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 1100px;
-  margin-bottom: 20px;
-`;
-
-const ViewList = styled.div`
-  border: 1px solid #eeeeee;
-  width: 140px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  padding: 6px;
-  border-radius: 4px;
-  margin-right: 20px;
-`;
-
-const Img = styled.img`
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-`;
-
 const New = styled.span`
   font-weight: 400;
   font-size: 20px;
-`;
-
-const Button = styled.button`
-  background-color: #3d8aff;
-  border: 1px solid #3d8aff;
-  color: #ffffff;
-  border-radius: 5px;
-  width: auto;
-  height: 48px;
-  padding: 0 18px;
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-`;
-
-const ViewContents = styled.div`
-  width: 1100px;
-  height: 70px;
-  border: 1px solid white;
-  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-`;
-
-const List = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 0 20px;
 `;
 
 const Title = styled.span`
@@ -91,56 +39,89 @@ const DateView = styled.span`
   padding-right: 20px;
 `;
 
-const ViewListDiv = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 const View = () => {
   return (
     <Body>
       <ViewContainer>
         <FeedList>게시글 목록</FeedList>
-        <TopContainer>
-          <ViewList>
-            <ViewListDiv>
-              <Img src={img} alt="Latest" />
-              <New>최신순</New>
-            </ViewListDiv>
-          </ViewList>
-          <Button>게시글 작성하기</Button>
-        </TopContainer>
-        <ViewContents>
-          <List>
-            <Title>제목이 들어가요</Title>
+        <FlexContainer
+          width="1100px"
+          justifyContent="space-between"
+          marginBottom="20px"
+        >
+          <StyledDiv width="140px" height="44px">
+            <img
+              src={img}
+              alt="Latest"
+              style={{ width: "24px", height: "24px", marginRight: "8px" }}
+            />
+            <New>최신순</New>
+          </StyledDiv>
+          <Button width="auto" height="48px" backgroundColor="#3D8AFF">
+            게시글 작성하기
+          </Button>
+        </FlexContainer>
+
+        {/* 게시글 목록 */}
+        <StyledDiv
+          width="1100px"
+          height="70px"
+          boxShadow="0px 1px 15px rgba(0, 0, 0, 0.1)"
+          marginTop="20px"
+        >
+          <FlexContainer width="100%">
+            <Title>첫 번째 게시글 제목</Title>
             <DateView>24/08/10</DateView>
-          </List>
-        </ViewContents>
-        <ViewContents>
-          <List>
-            <Title>제목이 들어가요</Title>
-            <DateView>24/08/10</DateView>
-          </List>
-        </ViewContents>
-        <ViewContents>
-          <List>
-            <Title>제목이 들어가요</Title>
-            <DateView>24/08/10</DateView>
-          </List>
-        </ViewContents>
-        <ViewContents>
-          <List>
-            <Title>제목이 들어가요</Title>
-            <DateView>24/08/10</DateView>
-          </List>
-        </ViewContents>
-        <ViewContents>
-          <List>
-            <Title>제목이 들어가요</Title>
-            <DateView>24/08/10</DateView>
-          </List>
-        </ViewContents>
+          </FlexContainer>
+        </StyledDiv>
+
+        <StyledDiv
+          width="1100px"
+          height="70px"
+          boxShadow="0px 1px 15px rgba(0, 0, 0, 0.1)"
+          marginTop="20px"
+        >
+          <FlexContainer width="100%">
+            <Title>두 번째 게시글 제목</Title>
+            <DateView>24/08/11</DateView>
+          </FlexContainer>
+        </StyledDiv>
+
+        <StyledDiv
+          width="1100px"
+          height="70px"
+          boxShadow="0px 1px 15px rgba(0, 0, 0, 0.1)"
+          marginTop="20px"
+        >
+          <FlexContainer width="100%">
+            <Title>세 번째 게시글 제목</Title>
+            <DateView>24/08/12</DateView>
+          </FlexContainer>
+        </StyledDiv>
+
+        <StyledDiv
+          width="1100px"
+          height="70px"
+          boxShadow="0px 1px 15px rgba(0, 0, 0, 0.1)"
+          marginTop="20px"
+        >
+          <FlexContainer width="100%">
+            <Title>네 번째 게시글 제목</Title>
+            <DateView>24/08/13</DateView>
+          </FlexContainer>
+        </StyledDiv>
+
+        <StyledDiv
+          width="1100px"
+          height="70px"
+          boxShadow="0px 1px 15px rgba(0, 0, 0, 0.1)"
+          marginTop="20px"
+        >
+          <FlexContainer width="100%">
+            <Title>다섯 번째 게시글 제목</Title>
+            <DateView>24/08/14</DateView>
+          </FlexContainer>
+        </StyledDiv>
       </ViewContainer>
     </Body>
   );

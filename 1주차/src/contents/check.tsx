@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "./components/button";
 
 const Container = styled.div`
   max-width: 1200px;
@@ -53,26 +54,12 @@ const Buttons = styled.div`
   margin-right: 840px;
 `;
 
-const Rewrite = styled.button`
-  color: #3d8aff;
-  border: 1px solid #3d8aff;
-  background-color: white;
-  width: auto;
-  padding: 10px 20px; /* 패딩을 추가하여 버튼 내부에 텍스트를 더 잘 맞출 수 있게 함 */
-  border-radius: 5px;
-  &:hover {
-    background-color: #3d8aff;
-    color: #ffffff;
-    border: 1px solid #3d8aff;
-  }
-`;
-
 const Delete = styled.button`
   color: #ff4646;
   border: 1px solid #ff4646;
   background-color: white;
   width: auto;
-  padding: 10px 20px; /* 패딩을 추가하여 버튼 내부에 텍스트를 더 잘 맞출 수 있게 함 */
+  padding: 10px 20px;
   border-radius: 5px;
   &:hover {
     background-color: #ff4646;
@@ -82,7 +69,7 @@ const Delete = styled.button`
 `;
 
 const Line = styled.div`
-  width: 1100px; /* 부모 컨테이너의 너비에 맞게 설정 */
+  width: 1100px;
   height: 1px;
   background-color: #eeeeee;
   margin: 0 auto;
@@ -107,8 +94,32 @@ const Check = () => {
       <Title>게시글 제목이 나옵니다</Title>
       <Dates>22/08/16</Dates>
       <Buttons>
-        <Rewrite>수정하기</Rewrite>
-        <Delete>삭제하기</Delete>
+        <Button
+          width="auto"
+          height="auto"
+          backgroundColor="white"
+          color="#3d8aff"
+          style={{
+            border: "1px solid #3d8aff",
+            padding: "10px 20px",
+            borderRadius: "5px",
+          }}
+        >
+          수정하기
+        </Button>
+        <Button
+          width="auto"
+          height="auto"
+          backgroundColor="white"
+          color="#ff4646"
+          style={{
+            border: "1px solid #ff4646",
+            padding: "10px 20px",
+            borderRadius: "5px",
+          }}
+        >
+          삭제하기
+        </Button>
       </Buttons>
       <Line />
       <Content>
